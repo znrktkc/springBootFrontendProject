@@ -7,18 +7,21 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxDatatableModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'products', component: ProductComponent},

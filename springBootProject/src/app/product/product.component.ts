@@ -18,7 +18,11 @@ export class ProductComponent implements OnInit {
   constructor(private productService: ProductService) { }
   @ViewChild(NgxDatatableModule) 'table': NgxDatatableModule;
   rows = [];
-  columns = [];
+  columns = [
+    { prop: 'name' },
+    { name: 'description' },
+    { name: 'detailDescription' }
+  ];
 
   ngOnInit(): void {
     this.getProducts();

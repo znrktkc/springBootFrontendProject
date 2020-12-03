@@ -22,12 +22,12 @@ export class LoginService {
         'Authorization': 'Basic ' + btoa(username + ':' + password)
       })
     };
-
    console.log('login method finished.');
    return this.http
-      .get<any>('http://localhost:8081/api/user', httpOptions)
+      .get<any>('http://localhost:8082', httpOptions)
       .pipe(
-        map((res) => res),
+        map((res) => res
+        ),
       );
     }
 }
