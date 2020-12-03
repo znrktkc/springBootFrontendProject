@@ -1,0 +1,14 @@
+<p>product works!</p>
+<ngx-datatable #table class="material"
+    [columns]="columns"
+    [headerHeight]='50'
+    [footerHeight]='50'
+    columnMode="force"
+    rowHeight="auto"
+    [limit]='1'
+    [rows]="rows"
+    [count]='20'
+    [offset]='1'
+    (sort)="onSort($event)"
+    (page)="setPage($event)">
+</ngx-datatable>
