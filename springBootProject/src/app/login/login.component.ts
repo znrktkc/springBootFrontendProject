@@ -9,7 +9,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
 
-  isLogged: any;
+  isLogged = false;
   cookie: any;
   constructor(private loginService: LoginService, private router: Router) { }
 
