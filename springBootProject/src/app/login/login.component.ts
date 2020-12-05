@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   isLogged: any;
   cookie: any;
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
       if (data != null){
         this.isLogged = true;
         this.cookie = data.username;
+        this.router.navigate(['products']);
       }
     })  ;
   }

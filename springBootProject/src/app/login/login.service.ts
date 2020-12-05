@@ -24,7 +24,7 @@ export class LoginService {
     };
    console.log('login method finished.');
    return this.http
-      .get<any>('http://localhost:8082', httpOptions)
+      .get<any>('http://localhost:8082/api/user', httpOptions)
       .pipe(
         map((res) => res
         ),

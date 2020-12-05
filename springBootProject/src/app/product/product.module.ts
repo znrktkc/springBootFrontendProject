@@ -4,6 +4,14 @@ import { ProductComponent } from './product.component';
 import { from } from 'rxjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: 'products',
+    component: ProductComponent
+  }
+];
 
 @NgModule({
   declarations: [ProductComponent],
@@ -12,7 +20,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     FormsModule,
     ReactiveFormsModule,
     NgxDatatableModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forChild(routes)
   ]
 })
 export class ProductModule { }
