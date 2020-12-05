@@ -11,18 +11,6 @@ export class AppComponent implements OnInit {
 
   title = 'springBootProject';
   isLogged = document.cookie ? true : false;
-  reorderable = true;
-  loadingIndicator = true;
-  rows = [
-    { name: 'Austin', gender: 'Male', company: 'Swimlane' },
-    { name: 'Dany', gender: 'Male', company: 'KFC' },
-    { name: 'Molly', gender: 'Female', company: 'Burger King' },
-  ];
-  columns = [
-    { prop: 'name' },
-    { name: 'gender' },
-    { name: 'company' }
-  ];
   constructor(private router: Router) { }
 
   ngOnInit(): void {
