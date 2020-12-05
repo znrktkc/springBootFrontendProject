@@ -1,25 +1,27 @@
-<div class="md-form active-cyan active-cyan-2 row" style="margin-bottom: 5px;">
-    <div class="col-md-4">
-        <input class="form-control" type="text" placeholder="Search for name" [(ngModel)]= "name" aria-label="Search" (keyup)="updateFilter($event)"/>
+<div style="margin-top: 10%;">
+    <div class="md-form active-cyan active-cyan-2 row" style="margin-bottom: 5px;">
+        <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="Search for name" [(ngModel)]= "name" aria-label="Search" (keyup)="updateFilter($event)"/>
+        </div>
+        <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="Search for description" [(ngModel)]= "description" aria-label="Search" (keyup)="updateFilter($event)"/>
+        </div>
+        <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="Search for detailDescription" [(ngModel)]= "detailDescription" aria-label="Search" (keyup)="updateFilter($event)"/>
+        </div>
     </div>
-    <div class="col-md-4">
-        <input class="form-control" type="text" placeholder="Search for description" [(ngModel)]= "description" aria-label="Search" (keyup)="updateFilter($event)"/>
-    </div>
-    <div class="col-md-4">
-        <input class="form-control" type="text" placeholder="Search for detailDescription" [(ngModel)]= "detailDescription" aria-label="Search" (keyup)="updateFilter($event)"/>
-    </div>
+    <ngx-datatable #table class="material"
+        [columns]="columns"
+        [headerHeight]='50'
+        [footerHeight]='50'
+        columnMode="force"
+        rowHeight="auto"
+        [externalPaging]="externalPaging"
+        [count]="totalElements"
+        [rows]="rows"
+        [offset]="page"
+        [limit]="size"
+        (sort)="onSort($event)"
+        (page)="setPage($event)">
+    </ngx-datatable>
 </div>
-<ngx-datatable #table class="material"
-    [columns]="columns"
-    [headerHeight]='50'
-    [footerHeight]='50'
-    columnMode="force"
-    rowHeight="auto"
-    [externalPaging]="externalPaging"
-    [count]="totalElements"
-    [rows]="rows"
-    [offset]="page"
-    [limit]="size"
-    (sort)="onSort($event)"
-    (page)="setPage($event)">
-</ngx-datatable>

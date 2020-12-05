@@ -9,6 +9,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,11 @@ import { ProductComponent } from './product/product.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgxDatatableModule,
     HttpClientModule,
+    MatSnackBarModule,
     FormsModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
@@ -28,6 +32,6 @@ import { ProductComponent } from './product/product.component';
     ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent  ]
 })
 export class AppModule { }

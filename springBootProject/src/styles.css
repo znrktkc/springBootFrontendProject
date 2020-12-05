@@ -2,3 +2,11 @@
 @import '@swimlane/ngx-datatable/index.css';
 @import '@swimlane/ngx-datatable/themes/material.css';
 @import '@swimlane/ngx-datatable/assets/icons.css';
+.green-snackbar {
+    background: rgb(23, 165, 75);
+    color: white;
+}
+.red-snackbar {
+    background: rgb(175, 37, 27);
+    color: white;
+}
